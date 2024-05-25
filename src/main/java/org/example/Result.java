@@ -1,16 +1,25 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Result {
-    List<Item> itemsInKnackpack;
+    ArrayList<Item> itemsInKnackpack;
     int totalValue;
     int totalWeight;
 
-    public Result(List<Item> list){
+    public Result(ArrayList<Item> list){
         this.itemsInKnackpack = list;
         totalValue = countValuse();
         totalWeight = countWeight();
+    }
+
+    public int getTotalValue() {
+        return totalValue;
+    }
+
+    public int getTotalWeight() {
+        return totalWeight;
     }
 
     private int countValuse(){

@@ -16,6 +16,16 @@ public class Item{
     public double getRatio(){
         return this.ratio;
     }
+
+    public int getValue(){
+        return this.value;
+    }
+
+    public int getWeight(){
+        return this.weight;
+    }
+
+
     @Override
     public String toString() {
         return "No: " + this.index + " value: " + this.value + ",  weight: " + this.weight + ", ratio: " + this.ratio + System.lineSeparator();

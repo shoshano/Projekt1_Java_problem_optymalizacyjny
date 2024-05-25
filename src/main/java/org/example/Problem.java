@@ -8,19 +8,27 @@ public class Problem {
     int upperLimit;
     int lowerLimit;
     int capacity;
-    List<Item> listOfItems;
+    ArrayList<Item> listOfItems;
 
-    public Problem(int nr, int s, int uL, int lL){
+    public Problem(int nr, int s){
         this.nrOfItemTypes = nr;
         this.seed = s;
-        this.upperLimit = uL;
-        this.lowerLimit =lL;
+        this.upperLimit = 10;
+        this.lowerLimit =1;
         this.listOfItems = randomGenerator();
     }
 
-    public List<Item> randomGenerator() {
+    public void setListOfItems(ArrayList<Item> list){
+        this.listOfItems = list;
+    }
+
+    public ArrayList<Item> getListOfItems(){
+        return this.listOfItems;
+    }
+
+    public ArrayList<Item> randomGenerator() {
         Random rand = new Random();
-        List<Item> list = new ArrayList<Item>();
+        ArrayList<Item> list = new ArrayList<Item>();
         rand.setSeed(seed);
         for(int i = 0; i < nrOfItemTypes; i++) {
             int randValue = (rand.nextInt(upperLimit - lowerLimit +1) + lowerLimit);
@@ -34,11 +42,11 @@ public class Problem {
 
 
     public Result Solve(int capacity){
-        List<Item> listCopy = this.listOfItems;
-        List<Item> resultList = new ArrayList<Item>();
+        ArrayList<Item> listCopy = this.listOfItems;
+        ArrayList<Item> resultList = new ArrayList<Item>();
 
         Collections.sort(listCopy, Comparator.comparing(Item::getRatio));
-        listCopy = listCopy.reversed();
+        Collections.reverse(listCopy);
         int currentCapacity = capacity;
         for(Item item : listCopy){
             while(currentCapacity >= item.weight){
