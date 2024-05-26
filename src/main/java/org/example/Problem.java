@@ -60,7 +60,7 @@ public class Problem {
 
     @Override
     public String toString() {
-        String list = "";
+        String list = "Lista typów przedmiotów" + System.lineSeparator();
         for (Item item : listOfItems){
             list += item.toString();
         }

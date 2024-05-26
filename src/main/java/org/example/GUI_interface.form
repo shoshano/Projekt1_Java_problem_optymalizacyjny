@@ -11,133 +11,64 @@
     <children>
       <vspacer id="70160">
         <constraints>
-          <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="19" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
-      <component id="c645e" class="javax.swing.JTextArea" binding="textArea_Title">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="1.0" weighty="0.01"/>
-        </constraints>
-        <properties>
-          <background color="-4986642"/>
-          <editable value="false"/>
-          <enabled value="true"/>
-          <font size="48" style="1"/>
-          <foreground color="-16777216"/>
-          <text value="Problem plecakowy"/>
-          <wrapStyleWord value="false"/>
-        </properties>
-      </component>
       <component id="de719" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
         <constraints>
-          <grid row="1" column="7" row-span="5" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="9" row-span="5" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties/>
       </component>
-      <component id="ce5d2" class="javax.swing.JTextArea" binding="textArea_Result">
-        <constraints>
-          <grid row="1" column="4" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="0.9" weighty="0.8"/>
-        </constraints>
-        <properties>
-          <background color="-458753"/>
-          <editable value="false"/>
-          <foreground color="-16777216"/>
-        </properties>
-      </component>
       <component id="651e0" class="javax.swing.JTextField" binding="textField_NrItems">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
           <gridbag weightx="0.4" weighty="0.0"/>
         </constraints>
         <properties>
           <background color="-1"/>
-        </properties>
-      </component>
-      <component id="bbb01" class="javax.swing.JTextArea" binding="textArea_NrItems">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="0.4" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <background color="-4986642"/>
-          <editable value="false"/>
-          <font size="16" style="1"/>
-          <foreground color="-16777216"/>
-          <text value="Podaj liczbe przedmiotów"/>
-        </properties>
-      </component>
-      <component id="8262d" class="javax.swing.JTextArea" binding="TextArea_Seed">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="0.4" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <background color="-4986642"/>
-          <editable value="false"/>
-          <font size="16" style="1"/>
-          <foreground color="-16777216"/>
-          <text value="Podaj ziarno"/>
+          <font size="16"/>
+          <horizontalAlignment value="0"/>
         </properties>
       </component>
       <component id="b3f3f" class="javax.swing.JTextField" binding="textField_Seed">
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="5" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
           <gridbag weightx="0.4" weighty="0.0"/>
         </constraints>
         <properties>
           <background color="-1"/>
+          <font size="16"/>
           <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
           <toolTipText value="ziarno"/>
-        </properties>
-      </component>
-      <component id="6d8df" class="javax.swing.JTextArea" binding="textArea_Capacity">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="0.4" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <background color="-4986642"/>
-          <editable value="false"/>
-          <font size="16" style="1"/>
-          <foreground color="-16777216"/>
-          <text value="Podaj pojemnośc plecaka"/>
         </properties>
       </component>
       <component id="2ce68" class="javax.swing.JTextField" binding="textField_Capacity">
         <constraints>
-          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
           <gridbag weightx="0.4" weighty="0.0"/>
         </constraints>
         <properties>
           <background color="-1"/>
+          <font size="16"/>
           <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
         </properties>
       </component>
       <component id="f3a6b" class="javax.swing.JButton" binding="button_Solve">
         <constraints>
-          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.3" weighty="0.1"/>
         </constraints>
         <properties>
@@ -147,62 +78,137 @@
           <text value="Policz"/>
         </properties>
       </component>
-      <component id="3031d" class="javax.swing.JTextArea" binding="textArea_Items">
-        <constraints>
-          <grid row="9" column="1" row-span="5" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <gridbag weightx="0.4" weighty="0.5"/>
-        </constraints>
-        <properties>
-          <background color="-1"/>
-          <editable value="false"/>
-          <foreground color="-16777216"/>
-        </properties>
-      </component>
       <component id="660b0" class="javax.swing.JSeparator">
         <constraints>
-          <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="1" column="5" row-span="17" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.1" weighty="0.0"/>
         </constraints>
         <properties/>
       </component>
       <component id="f7e04" class="javax.swing.JSeparator">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="1" column="0" row-span="19" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.1" weighty="0.2"/>
         </constraints>
-        <properties/>
+        <properties>
+          <font size="16"/>
+        </properties>
       </component>
       <component id="b5169" class="javax.swing.JSeparator">
         <constraints>
-          <grid row="13" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="18" column="1" row-span="1" col-span="8" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.03"/>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-4986642"/>
+        </properties>
       </component>
       <scrollpane id="da3c5">
         <constraints>
-          <grid row="1" column="5" row-span="13" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="1" column="7" row-span="17" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="2.6" weighty="0.0"/>
         </constraints>
         <properties>
           <background color="-13797671"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="ce5d2" class="javax.swing.JTextArea" binding="textArea_Result">
+            <constraints/>
+            <properties>
+              <background color="-458753"/>
+              <editable value="false"/>
+              <font size="16"/>
+              <foreground color="-16777216"/>
+            </properties>
+          </component>
+        </children>
       </scrollpane>
       <scrollpane id="704">
         <constraints>
-          <grid row="9" column="2" row-span="5" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="9" column="1" row-span="9" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.6"/>
         </constraints>
         <properties>
           <background color="-13797671"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="3031d" class="javax.swing.JTextArea" binding="textArea_Items">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+              <editable value="false"/>
+              <font size="16"/>
+              <foreground color="-16777216"/>
+            </properties>
+          </component>
+        </children>
       </scrollpane>
+      <component id="23f97" class="javax.swing.JLabel" binding="Lable_title">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.01"/>
+        </constraints>
+        <properties>
+          <background color="-4986642"/>
+          <font size="48" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Problem plecakowy"/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="49470" class="javax.swing.JLabel" binding="Label_nrItems">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.4" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4986642"/>
+          <font size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Podaj liczbe przedmiotów"/>
+        </properties>
+      </component>
+      <component id="a40e6" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="1" column="8" row-span="17" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="fb574" class="javax.swing.JLabel" binding="Label_Seed">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.4" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4986642"/>
+          <font size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Podaj ziarno"/>
+        </properties>
+      </component>
+      <component id="85fd7" class="javax.swing.JLabel" binding="label_capacity">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.4" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4986642"/>
+          <font size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Podaj pojemność plecaka"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

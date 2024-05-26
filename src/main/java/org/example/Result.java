@@ -40,7 +40,7 @@ public class Result {
 
     @Override
     public String toString(){
-        String list = "";
+        String list = "Lista przedmiotów w plecaku" + System.lineSeparator();
         for(Item item : itemsInKnackpack){
             list += item.toString();
         }

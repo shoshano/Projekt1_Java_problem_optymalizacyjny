@@ -6,6 +6,8 @@ import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.Locale;
 
 public class GUI_interface {
@@ -13,14 +15,14 @@ public class GUI_interface {
     private JTextArea textArea2;
     private JTextArea textArea_Result;
     private JTextField textField_NrItems;
-    private JTextArea textArea_NrItems;
-    private JTextArea textArea_Title;
-    private JTextArea TextArea_Seed;
     private JTextField textField_Seed;
-    private JTextArea textArea_Capacity;
     private JTextField textField_Capacity;
     private JTextArea textArea_Items;
     private JPanel mainPanel;
+    private JLabel Lable_title;
+    private JLabel Label_nrItems;
+    private JLabel Label_Seed;
+    private JLabel label_capacity;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("KnapsackGUI");
@@ -39,6 +41,51 @@ public class GUI_interface {
                 textArea_Items.setText(problem.toString());
                 Result result = problem.Solve(Integer.valueOf(textField_Capacity.getText()));
                 textArea_Result.setText(result.toString());
+            }
+        });
+
+        textField_NrItems.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                char c = e.getKeyChar();
+                if ((c >= '0' && c <= '9') || c == 8 || c == 127) {
+                    textField_NrItems.setEditable(true);
+
+                } else {
+                    textField_NrItems.setEditable(false);
+
+                }
+            }
+        });
+
+        textField_Seed.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                char c = e.getKeyChar();
+                if ((c >= '0' && c <= '9') || c == 8 || c == 127) {
+                    textField_Seed.setEditable(true);
+
+                } else {
+                    textField_Seed.setEditable(false);
+
+                }
+            }
+        });
+
+        textField_Capacity.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                char c = e.getKeyChar();
+                if ((c >= '0' && c <= '9') || c == 8 || c == 127) {
+                    textField_Capacity.setEditable(true);
+
+                } else {
+                    textField_Capacity.setEditable(false);
+
+                }
             }
         });
     }
@@ -65,110 +112,54 @@ public class GUI_interface {
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 14;
+        gbc.gridy = 19;
+        gbc.gridwidth = 3;
         gbc.fill = GridBagConstraints.VERTICAL;
         mainPanel.add(spacer1, gbc);
-        textArea_Title = new JTextArea();
-        textArea_Title.setBackground(new Color(-4986642));
-        textArea_Title.setEditable(false);
-        textArea_Title.setEnabled(true);
-        Font textArea_TitleFont = this.$$$getFont$$$(null, Font.BOLD, 48, textArea_Title.getFont());
-        if (textArea_TitleFont != null) textArea_Title.setFont(textArea_TitleFont);
-        textArea_Title.setForeground(new Color(-16777216));
-        textArea_Title.setText("Problem plecakowy");
-        textArea_Title.setWrapStyleWord(false);
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.gridwidth = 4;
-        gbc.weightx = 1.0;
-        gbc.weighty = 0.01;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        mainPanel.add(textArea_Title, gbc);
         textArea2 = new JTextArea();
         gbc = new GridBagConstraints();
-        gbc.gridx = 7;
+        gbc.gridx = 9;
         gbc.gridy = 1;
         gbc.gridheight = 5;
         gbc.fill = GridBagConstraints.BOTH;
         mainPanel.add(textArea2, gbc);
-        textArea_Result = new JTextArea();
-        textArea_Result.setBackground(new Color(-458753));
-        textArea_Result.setEditable(false);
-        textArea_Result.setForeground(new Color(-16777216));
-        gbc = new GridBagConstraints();
-        gbc.gridx = 4;
-        gbc.gridy = 1;
-        gbc.gridheight = 13;
-        gbc.weightx = 0.9;
-        gbc.weighty = 0.8;
-        gbc.fill = GridBagConstraints.BOTH;
-        mainPanel.add(textArea_Result, gbc);
         textField_NrItems = new JTextField();
         textField_NrItems.setBackground(new Color(-1));
+        Font textField_NrItemsFont = this.$$$getFont$$$(null, -1, 16, textField_NrItems.getFont());
+        if (textField_NrItemsFont != null) textField_NrItems.setFont(textField_NrItemsFont);
+        textField_NrItems.setHorizontalAlignment(0);
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 3;
+        gbc.gridwidth = 3;
         gbc.weightx = 0.4;
-        gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         mainPanel.add(textField_NrItems, gbc);
-        textArea_NrItems = new JTextArea();
-        textArea_NrItems.setBackground(new Color(-4986642));
-        textArea_NrItems.setEditable(false);
-        Font textArea_NrItemsFont = this.$$$getFont$$$(null, Font.BOLD, 16, textArea_NrItems.getFont());
-        if (textArea_NrItemsFont != null) textArea_NrItems.setFont(textArea_NrItemsFont);
-        textArea_NrItems.setForeground(new Color(-16777216));
-        textArea_NrItems.setText("Podaj liczbe przedmiotów");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.weightx = 0.4;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        mainPanel.add(textArea_NrItems, gbc);
-        TextArea_Seed = new JTextArea();
-        TextArea_Seed.setBackground(new Color(-4986642));
-        TextArea_Seed.setEditable(false);
-        Font TextArea_SeedFont = this.$$$getFont$$$(null, Font.BOLD, 16, TextArea_Seed.getFont());
-        if (TextArea_SeedFont != null) TextArea_Seed.setFont(TextArea_SeedFont);
-        TextArea_Seed.setForeground(new Color(-16777216));
-        TextArea_Seed.setText("Podaj ziarno");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 4;
-        gbc.weightx = 0.4;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        mainPanel.add(TextArea_Seed, gbc);
         textField_Seed = new JTextField();
         textField_Seed.setBackground(new Color(-1));
+        Font textField_SeedFont = this.$$$getFont$$$(null, -1, 16, textField_Seed.getFont());
+        if (textField_SeedFont != null) textField_Seed.setFont(textField_SeedFont);
         textField_Seed.setForeground(new Color(-16777216));
+        textField_Seed.setHorizontalAlignment(0);
         textField_Seed.setToolTipText("ziarno");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 5;
+        gbc.gridwidth = 3;
         gbc.weightx = 0.4;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         mainPanel.add(textField_Seed, gbc);
-        textArea_Capacity = new JTextArea();
-        textArea_Capacity.setBackground(new Color(-4986642));
-        textArea_Capacity.setEditable(false);
-        Font textArea_CapacityFont = this.$$$getFont$$$(null, Font.BOLD, 16, textArea_Capacity.getFont());
-        if (textArea_CapacityFont != null) textArea_Capacity.setFont(textArea_CapacityFont);
-        textArea_Capacity.setForeground(new Color(-16777216));
-        textArea_Capacity.setText("Podaj pojemnośc plecaka");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 6;
-        gbc.weightx = 0.4;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        mainPanel.add(textArea_Capacity, gbc);
         textField_Capacity = new JTextField();
         textField_Capacity.setBackground(new Color(-1));
+        Font textField_CapacityFont = this.$$$getFont$$$(null, -1, 16, textField_Capacity.getFont());
+        if (textField_CapacityFont != null) textField_Capacity.setFont(textField_CapacityFont);
         textField_Capacity.setForeground(new Color(-16777216));
+        textField_Capacity.setHorizontalAlignment(0);
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 7;
+        gbc.gridwidth = 3;
         gbc.weightx = 0.4;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -182,56 +173,142 @@ public class GUI_interface {
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 8;
+        gbc.gridwidth = 3;
         gbc.weightx = 0.3;
         gbc.weighty = 0.1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         mainPanel.add(button_Solve, gbc);
-        textArea_Items = new JTextArea();
-        textArea_Items.setBackground(new Color(-1));
-        textArea_Items.setEditable(false);
-        textArea_Items.setForeground(new Color(-16777216));
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 9;
-        gbc.gridheight = 5;
-        gbc.weightx = 0.4;
-        gbc.weighty = 0.5;
-        gbc.fill = GridBagConstraints.BOTH;
-        mainPanel.add(textArea_Items, gbc);
         final JSeparator separator1 = new JSeparator();
         gbc = new GridBagConstraints();
-        gbc.gridx = 3;
-        gbc.gridy = 13;
+        gbc.gridx = 5;
+        gbc.gridy = 1;
+        gbc.gridheight = 17;
+        gbc.weightx = 0.1;
         gbc.fill = GridBagConstraints.BOTH;
         mainPanel.add(separator1, gbc);
         final JSeparator separator2 = new JSeparator();
+        Font separator2Font = this.$$$getFont$$$(null, -1, 16, separator2.getFont());
+        if (separator2Font != null) separator2.setFont(separator2Font);
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 8;
+        gbc.gridy = 1;
+        gbc.gridheight = 19;
+        gbc.weightx = 0.1;
+        gbc.weighty = 0.2;
         gbc.fill = GridBagConstraints.BOTH;
         mainPanel.add(separator2, gbc);
         final JSeparator separator3 = new JSeparator();
+        separator3.setForeground(new Color(-4986642));
         gbc = new GridBagConstraints();
-        gbc.gridx = 6;
-        gbc.gridy = 13;
+        gbc.gridx = 1;
+        gbc.gridy = 18;
+        gbc.gridwidth = 8;
+        gbc.weightx = 1.0;
+        gbc.weighty = 0.03;
         gbc.fill = GridBagConstraints.BOTH;
         mainPanel.add(separator3, gbc);
         final JScrollPane scrollPane1 = new JScrollPane();
         scrollPane1.setBackground(new Color(-13797671));
         gbc = new GridBagConstraints();
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 1;
-        gbc.gridheight = 13;
+        gbc.gridheight = 17;
+        gbc.weightx = 2.6;
         gbc.fill = GridBagConstraints.BOTH;
         mainPanel.add(scrollPane1, gbc);
+        textArea_Result = new JTextArea();
+        textArea_Result.setBackground(new Color(-458753));
+        textArea_Result.setEditable(false);
+        Font textArea_ResultFont = this.$$$getFont$$$(null, -1, 16, textArea_Result.getFont());
+        if (textArea_ResultFont != null) textArea_Result.setFont(textArea_ResultFont);
+        textArea_Result.setForeground(new Color(-16777216));
+        scrollPane1.setViewportView(textArea_Result);
         final JScrollPane scrollPane2 = new JScrollPane();
         scrollPane2.setBackground(new Color(-13797671));
         gbc = new GridBagConstraints();
-        gbc.gridx = 2;
+        gbc.gridx = 1;
         gbc.gridy = 9;
-        gbc.gridheight = 5;
+        gbc.gridwidth = 3;
+        gbc.gridheight = 9;
+        gbc.weighty = 0.6;
         gbc.fill = GridBagConstraints.BOTH;
         mainPanel.add(scrollPane2, gbc);
+        textArea_Items = new JTextArea();
+        textArea_Items.setBackground(new Color(-1));
+        textArea_Items.setEditable(false);
+        Font textArea_ItemsFont = this.$$$getFont$$$(null, -1, 16, textArea_Items.getFont());
+        if (textArea_ItemsFont != null) textArea_Items.setFont(textArea_ItemsFont);
+        textArea_Items.setForeground(new Color(-16777216));
+        scrollPane2.setViewportView(textArea_Items);
+        Lable_title = new JLabel();
+        Lable_title.setBackground(new Color(-4986642));
+        Font Lable_titleFont = this.$$$getFont$$$(null, Font.BOLD, 48, Lable_title.getFont());
+        if (Lable_titleFont != null) Lable_title.setFont(Lable_titleFont);
+        Lable_title.setForeground(new Color(-16777216));
+        Lable_title.setHorizontalAlignment(0);
+        Lable_title.setHorizontalTextPosition(0);
+        Lable_title.setText("Problem plecakowy");
+        Lable_title.setToolTipText("");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 9;
+        gbc.weightx = 1.0;
+        gbc.weighty = 0.01;
+        gbc.anchor = GridBagConstraints.NORTH;
+        mainPanel.add(Lable_title, gbc);
+        Label_nrItems = new JLabel();
+        Label_nrItems.setBackground(new Color(-4986642));
+        Font Label_nrItemsFont = this.$$$getFont$$$(null, Font.BOLD, 16, Label_nrItems.getFont());
+        if (Label_nrItemsFont != null) Label_nrItems.setFont(Label_nrItemsFont);
+        Label_nrItems.setForeground(new Color(-16777216));
+        Label_nrItems.setHorizontalAlignment(0);
+        Label_nrItems.setHorizontalTextPosition(2);
+        Label_nrItems.setText("Podaj liczbe przedmiotów");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.gridwidth = 3;
+        gbc.weightx = 0.4;
+        gbc.fill = GridBagConstraints.BOTH;
+        mainPanel.add(Label_nrItems, gbc);
+        final JSeparator separator4 = new JSeparator();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 8;
+        gbc.gridy = 1;
+        gbc.gridheight = 17;
+        gbc.weightx = 0.1;
+        gbc.fill = GridBagConstraints.BOTH;
+        mainPanel.add(separator4, gbc);
+        Label_Seed = new JLabel();
+        Label_Seed.setBackground(new Color(-4986642));
+        Font Label_SeedFont = this.$$$getFont$$$(null, Font.BOLD, 16, Label_Seed.getFont());
+        if (Label_SeedFont != null) Label_Seed.setFont(Label_SeedFont);
+        Label_Seed.setForeground(new Color(-16777216));
+        Label_Seed.setHorizontalAlignment(0);
+        Label_Seed.setHorizontalTextPosition(2);
+        Label_Seed.setText("Podaj ziarno");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        gbc.gridwidth = 2;
+        gbc.weightx = 0.4;
+        gbc.fill = GridBagConstraints.BOTH;
+        mainPanel.add(Label_Seed, gbc);
+        label_capacity = new JLabel();
+        label_capacity.setBackground(new Color(-4986642));
+        Font label_capacityFont = this.$$$getFont$$$(null, Font.BOLD, 16, label_capacity.getFont());
+        if (label_capacityFont != null) label_capacity.setFont(label_capacityFont);
+        label_capacity.setForeground(new Color(-16777216));
+        label_capacity.setHorizontalAlignment(0);
+        label_capacity.setHorizontalTextPosition(2);
+        label_capacity.setText("Podaj pojemność plecaka");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 6;
+        gbc.weightx = 0.4;
+        gbc.fill = GridBagConstraints.BOTH;
+        mainPanel.add(label_capacity, gbc);
     }
 
     /**
