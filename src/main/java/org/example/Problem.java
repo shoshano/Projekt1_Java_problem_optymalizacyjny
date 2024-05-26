@@ -7,7 +7,6 @@ public class Problem {
     int seed;
     int upperLimit;
     int lowerLimit;
-    int capacity;
     ArrayList<Item> listOfItems;
 
     public Problem(int nr, int s){

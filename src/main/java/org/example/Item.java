@@ -28,7 +28,8 @@ public class Item{
 
     @Override
     public String toString() {
-        return "No: " + this.index + " value: " + this.value + ",  weight: " + this.weight + System.lineSeparator();
+        return "No: " + this.index + " value: " + this.value +
+                ",  weight: " + this.weight + System.lineSeparator();
     }
 
 
